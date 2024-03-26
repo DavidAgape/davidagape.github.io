@@ -1,1 +1,562 @@
 
+<!-- begin snippet: js hide: false console: true babel: null -->
+
+<!-- language: lang-js -->
+
+    let href = 'https://google.com';
+    let dayElement = document.getElementById('dayElement')
+    let hr = document.getElementById('hr');
+    let min = document.getElementById('min');
+    let sec = document.getElementById("sec");
+
+    let day;
+
+    setInterval(() => {
+      let currentTime = new Date();
+
+      hr.innerHTML = formatTime(currentTime.getHours());
+      min.innerHTML = formatTime(currentTime.getMinutes());
+      sec.innerHTML = formatTime(currentTime.getSeconds());
+      day = currentTime.getDay();
+
+      switch (day) {
+        case 0:
+          dayElement.innerHTML = "Sunday";
+          break;
+        case 1:
+          dayElement.innerHTML = "Monday";
+          break;
+        case 2:
+          dayElement.innerHTML = "Tuesday";
+          break;
+        case 3:
+          dayElement.innerHTML = "Wednesday";
+          break;
+        case 4:
+          dayElement.innerHTML = "Thursday";
+          break;  
+        case 5:
+          dayElement.innerHTML = "Friday";
+          break;
+        case 6:
+          dayElement.innerHTML = "Saturday";
+          break;
+      }
+    }, 1000);
+
+    function formatTime(time) {
+      return time < 10 ? "0" + time : time;
+    }
+
+    function changeLink() {
+      let currentTime = new Date();
+      let hour = currentTime.getHours();
+
+      if (day === 1 && hour >= 18 && hour < 24) {
+        href = 'https://www.stackoverflow.com';
+      } else if (day === 6 && hour >= 0 && hour < 12) {
+        href = 'https://www.cnn.com';
+      } else if (hour >= 12 && hour < 18) {
+        href = 'https://www.youtube.com';
+      } else if (hour >= 18 && hour < 24) {
+        href = 'https://www.facebook.com';
+      }
+
+      window.location.href = href;
+    }
+
+<!-- language: lang-css -->
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0%;
+      padding: 0%;
+      background-color: whitesmoke;
+    }
+
+    .hero {
+      position: fixed;
+      bottom: 0%;
+      right: 0%;
+    }
+
+    button {
+      background-color: #18f98f;
+      border: none;
+      border-radius: 160px;
+      position: absolute;
+      width: auto;
+      text-align: center;
+      padding: 20px 50px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .clock {
+      font-size: small;
+      font-family: monospace;
+    }
+
+<!-- language: lang-html -->
+
+    <!DOCTYPE html>
+    <html lang="en" dir="itr">
+
+    <head>
+      <meta charset="utf-8">
+      <title> link </title>
+    </head>
+
+    <body>
+      <button type="button" onclick="changeLink()">Go To Link</button>
+
+      <div class="hero">
+        <div class="container">
+          <div class="clock">
+            <span id="dayElement">Monday</span>
+            <span id="hr">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+          </div>
+        </div>
+      </div>
+    </body>
+
+    </html>
+
+<!-- end snippet -->
+
+
+
+
+
+<!-- begin snippet: js hide: false console: true babel: null -->
+
+<!-- language: lang-js -->
+
+    let href = 'https://google.com';
+    let dayElement = document.getElementById('dayElement')
+    let hr = document.getElementById('hr');
+    let min = document.getElementById('min');
+    let sec = document.getElementById("sec");
+
+    let day;
+
+    setInterval(() => {
+      let currentTime = new Date();
+
+      hr.innerHTML = formatTime(currentTime.getHours());
+      min.innerHTML = formatTime(currentTime.getMinutes());
+      sec.innerHTML = formatTime(currentTime.getSeconds());
+      day = currentTime.getDay();
+
+      switch (day) {
+        case 0:
+          dayElement.innerHTML = "Sunday";
+          break;
+        case 1:
+          dayElement.innerHTML = "Monday";
+          break;
+        case 2:
+          dayElement.innerHTML = "Tuesday";
+          break;
+        case 3:
+          dayElement.innerHTML = "Wednesday";
+          break;
+        case 4:
+          dayElement.innerHTML = "Thursday";
+          break;  
+        case 5:
+          dayElement.innerHTML = "Friday";
+          break;
+        case 6:
+          dayElement.innerHTML = "Saturday";
+          break;
+      }
+    }, 1000);
+
+    function formatTime(time) {
+      return time < 10 ? "0" + time : time;
+    }
+
+    function changeLink() {
+      let currentTime = new Date();
+      let hour = currentTime.getHours();
+
+      if (day === 1 && hour >= 0 && hour < 12) {
+        href = 'https://www.google.com';
+      } else if (day === 6 && hour >= 0 && hour < 12) {
+        href = 'https://www.cnn.com';
+      } else if (hour >= 12 && hour < 18) {
+        href = 'https://www.youtube.com';
+      } else if (hour >= 18 && hour < 24) {
+        href = 'https://www.facebook.com';
+      }
+
+      window.location.href = href;
+    }
+
+<!-- language: lang-css -->
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0%;
+      padding: 0%;
+      background-color: whitesmoke;
+    }
+
+    .hero {
+      position: fixed;
+      bottom: 0%;
+      right: 0%;
+    }
+
+    button {
+      background-color: #18f98f;
+      border: none;
+      border-radius: 160px;
+      position: absolute;
+      width: auto;
+      text-align: center;
+      padding: 20px 50px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .clock {
+      font-size: small;
+      font-family: monospace;
+    }
+
+<!-- language: lang-html -->
+
+    <!DOCTYPE html>
+    <html lang="en" dir="itr">
+
+    <head>
+      <meta charset="utf-8">
+      <title> link </title>
+    </head>
+
+    <body>
+      <button type="button" onclick="changeLink()">Go To Link</button>
+
+      <div class="hero">
+        <div class="container">
+          <div class="clock">
+            <span id="dayElement">Monday</span>
+            <span id="hr">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+          </div>
+        </div>
+      </div>
+    </body>
+
+    </html>
+
+<!-- end snippet -->
+
+
+
+
+
+<!-- begin snippet: js hide: false console: true babel: null -->
+
+<!-- language: lang-js -->
+
+    let href = 'https://google.com';
+    let dayElement = document.getElementById('dayElement')
+    let hr = document.getElementById('hr');
+    let min = document.getElementById('min');
+    let sec = document.getElementById("sec");
+
+    let day;
+
+    setInterval(() => {
+      let currentTime = new Date();
+
+      hr.innerHTML = formatTime(currentTime.getHours());
+      min.innerHTML = formatTime(currentTime.getMinutes());
+      sec.innerHTML = formatTime(currentTime.getSeconds());
+      day = currentTime.getDay();
+
+      switch (day) {
+        case 0:
+          dayElement.innerHTML = "Sunday";
+          break;
+        case 1:
+          dayElement.innerHTML = "Monday";
+          break;
+        case 2:
+          dayElement.innerHTML = "Tuesday";
+          break;
+        case 3:
+          dayElement.innerHTML = "Wednesday";
+          break;
+        case 4:
+          dayElement.innerHTML = "Thursday";
+          break;  
+        case 5:
+          dayElement.innerHTML = "Friday";
+          break;
+        case 6:
+          dayElement.innerHTML = "Saturday";
+          break;
+      }
+    }, 1000);
+
+    function formatTime(time) {
+      return time < 10 ? "0" + time : time;
+    }
+
+    function changeLink() {
+      let currentTime = new Date();
+      let hour = currentTime.getHours();
+
+      if (day === 1 && hour >= 0 && hour < 12) {
+        href = 'https://www.google.com';
+      } else if (day === 6 && hour >= 0 && hour < 12) {
+        href = 'https://www.cnn.com';
+      } else if (hour >= 12 && hour < 18) {
+        href = 'https://www.youtube.com';
+      } else if (hour >= 18 && hour < 24) {
+        href = 'https://www.facebook.com';
+      }
+
+      window.location.href = href;
+    }
+
+<!-- language: lang-css -->
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0%;
+      padding: 0%;
+      background-color: whitesmoke;
+    }
+
+    .hero {
+      position: fixed;
+      bottom: 0%;
+      right: 0%;
+    }
+
+    button {
+      background-color: #18f98f;
+      border: none;
+      border-radius: 160px;
+      position: absolute;
+      width: auto;
+      text-align: center;
+      padding: 20px 50px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .clock {
+      font-size: small;
+      font-family: monospace;
+    }
+
+<!-- language: lang-html -->
+
+    <!DOCTYPE html>
+    <html lang="en" dir="itr">
+
+    <head>
+      <meta charset="utf-8">
+      <title> link </title>
+    </head>
+
+    <body>
+      <button type="button" onclick="changeLink()">Go To Link</button>
+
+      <div class="hero">
+        <div class="container">
+          <div class="clock">
+            <span id="dayElement">Monday</span>
+            <span id="hr">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+          </div>
+        </div>
+      </div>
+    </body>
+
+    </html>
+
+<!-- end snippet -->
+
+
+
+
+
+<!-- begin snippet: js hide: false console: true babel: null -->
+
+<!-- language: lang-js -->
+
+    let href = 'https://google.com';
+    let dayElement = document.getElementById('dayElement')
+    let hr = document.getElementById('hr');
+    let min = document.getElementById('min');
+    let sec = document.getElementById("sec");
+
+    let day;
+
+    setInterval(() => {
+      let currentTime = new Date();
+
+      hr.innerHTML = formatTime(currentTime.getHours());
+      min.innerHTML = formatTime(currentTime.getMinutes());
+      sec.innerHTML = formatTime(currentTime.getSeconds());
+      day = currentTime.getDay();
+
+      switch (day) {
+        case 0:
+          dayElement.innerHTML = "Sunday";
+          break;
+        case 1:
+          dayElement.innerHTML = "Monday";
+          break;
+        case 2:
+          dayElement.innerHTML = "Tuesday";
+          break;
+        case 3:
+          dayElement.innerHTML = "Wednesday";
+          break;
+        case 4:
+          dayElement.innerHTML = "Thursday";
+          break;  
+        case 5:
+          dayElement.innerHTML = "Friday";
+          break;
+        case 6:
+          dayElement.innerHTML = "Saturday";
+          break;
+      }
+    }, 1000);
+
+    function formatTime(time) {
+      return time < 10 ? "0" + time : time;
+    }
+
+    function changeLink() {
+      let currentTime = new Date();
+      let hour = currentTime.getHours();
+
+      if (day === 1 && hour >= 0 && hour < 12) {
+        href = 'https://www.google.com';
+      } else if (day === 6 && hour >= 0 && hour < 12) {
+        href = 'https://www.cnn.com';
+      } else if (hour >= 12 && hour < 18) {
+        href = 'https://www.youtube.com';
+      } else if (hour >= 18 && hour < 24) {
+        href = 'https://www.facebook.com';
+      }
+
+      window.location.href = href;
+    }
+
+<!-- language: lang-css -->
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0%;
+      padding: 0%;
+      background-color: whitesmoke;
+    }
+
+    .hero {
+      position: fixed;
+      bottom: 0%;
+      right: 0%;
+    }
+
+    button {
+      background-color: #18f98f;
+      border: none;
+      border-radius: 160px;
+      position: absolute;
+      width: auto;
+      text-align: center;
+      padding: 20px 50px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .clock {
+      font-size: small;
+      font-family: monospace;
+    }
+
+<!-- language: lang-html -->
+
+    <!DOCTYPE html>
+    <html lang="en" dir="itr">
+
+    <head>
+      <meta charset="utf-8">
+      <title> link </title>
+    </head>
+
+    <body>
+      <button type="button" onclick="changeLink()">Go To Link</button>
+
+      <div class="hero">
+        <div class="container">
+          <div class="clock">
+            <span id="dayElement">Monday</span>
+            <span id="hr">00</span>
+            <span>:</span>
+            <span id="min">00</span>
+            <span>:</span>
+            <span id="sec">00</span>
+          </div>
+        </div>
+      </div>
+    </body>
+
+    </html>
+
+<!-- end snippet -->
+
+
